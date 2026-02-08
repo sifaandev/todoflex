@@ -1,73 +1,81 @@
-# React + TypeScript + Vite
+# 📝 Task Manager App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern **Task Manager / Todo App** built with the **same tech stack** across the project. The app supports **Active & Completed tasks**, **Add / Delete / Clear All**, **Search**, **Dark & Light mode**, and uses **LocalStorage** to persist data.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## React Compiler
+* ✅ **Add Tasks** – Create new tasks instantly
+* 🔄 **Active & Completed Tasks** – Separate task states
+* ✏️ **Update Task Status** – Mark tasks as completed or active
+* 🗑️ **Delete Task** – Remove individual tasks
+* ❌ **Delete All Tasks** – Clear all tasks at once
+* 🔍 **Search Tasks** – Quickly find tasks by name
+* 🌙 **Dark / Light Mode** – Toggle between themes
+* 💾 **LocalStorage Support** – Data persists even after refresh
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠 Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+* **Frontend:** React (same tech used throughout)
+* **Styling:** CSS / Tailwind (as used in project)
+* **State Management:** React Hooks
+* **Storage:** Browser LocalStorage
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 📂 Project Structure (Basic)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+src/
+ ├── components/
+ ├── hooks/
+ ├── App.jsx
+ └── main.jsx
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🧠 How It Works
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+* Tasks are stored in **LocalStorage**
+* On app load, tasks are fetched from LocalStorage
+* Any **add / update / delete** action updates both state & LocalStorage
+* Theme preference (Dark/Light) is also stored locally
+
+---
+
+## ⚙️ Installation & Setup
+
+```bash
+# Clone the repository
+git clone https://github.com/sifaandev/todoflex
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
 ```
+
+---
+
+## 📌 Future Enhancements (Todos)
+
+* ⏰ Task due dates & reminders
+* 🏷 Task categories / tags
+* ☁️ Cloud sync (Firebase / Backend)
+* 📱 Mobile-first UI improvements
+
+---
+
+## 🧑‍💻 Author
+
+**Siphan**
+Full Stack Developer 🚀
+
+---
+
+⭐ If you like this project, don’t forget to **star the repo**!
